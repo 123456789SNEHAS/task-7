@@ -1,0 +1,11 @@
+CREATE TABLE transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    buyer_id INT,
+    product_name VARCHAR(100),
+    quantity INT,
+    unit_price DOUBLE,
+    total_price DOUBLE,
+    payment_method VARCHAR(20),
+    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (buyer_id) REFERENCES buyers(id)
+);
